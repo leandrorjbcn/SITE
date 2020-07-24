@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+
+<!-- REFERENCIA YOUTUBE: https://www.youtube.com/watch?v=ZeDP-rzOnAA - Build A Responsive Website With HTML & CSS Tutorial -->
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+<!--    <link rel="stylesheet" href="./style.css" />  -->
+    <title>Services</title>
+
+    <style type="text/css">
+    {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    header{
+        display: flex;     
+        width: 90%;
+        height: 10vh;
+        margin: auto;
+        align-items: center;
+    }
+
+    .logo-container, .nav-links, .cart{
+        display: flex;
+    }
+
+    .logo-container {
+        flex: 1;
+    }
+
+    .logo{
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    nav {
+        flex: 2;
+    }
+
+    .nav-links{
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .nav-link {
+        color: #5f5f79;
+        font-size: 18px;  
+        text-decoration: none;
+    }
+
+    .cart {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .presentation{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        min-height: 80vh;
+        /*align-items: center;*/
+    }
+
+    .introduction{    
+        flex: 1;
+    }
+
+    .intro-text h1{
+        font-size: 44px;
+        font-weight: 500;
+        background: linear-gradient(to right, #494964, #6f6f89);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .intro-text h2{
+        font-size: 34px;
+        font-weight: 500;
+        background: linear-gradient(to right, #494964, #6f6f89);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }    
+
+    .intro-text p{
+        margin-top: 5px;
+        font-size: 22px;
+        color: #585772;
+    }
+
+    .cta{
+        padding: 50px 0px 0px 0px;
+    }
+
+    .cta-select{
+        border: 2px solid #c36cbb;
+        background: transparent;
+        color: #c36cbb;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .cta-add {
+        background: #c36cbb;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        color: white;
+        /*margin: 30px 0px 0px 30px;*/
+    }
+
+    .cover {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        height: 60vh;
+    }
+
+    .cover img{
+        height: 100%;
+        filter: drop-shadow(0px 5px 3px black);
+        animation: drop 1.5s ease;
+    }
+
+    .big-circle{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: -1;
+        opacity: 0.5;
+        height: 80%;
+    }
+
+    .medium-circle{
+        position: absolute;
+        top: 30%;
+        right: 30%;
+        z-index: -1;
+        height: 60%;
+        opacity: 0.4;
+    }
+
+    .small-circle {
+        position: absolute;
+        bottom: 0%;
+        left: 20%;
+        z-index: -1;
+    }
+
+    .laptop-select{
+        width: 15%;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        right: 20%;
+    }
+
+    @keyframes drop{
+        0%{
+            opacity: 0;
+            transform: translateY(-80px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    @media screen and (max-width: 1024px){
+        .presentation{
+            flex-direction: column;
+        }
+        .introduction{
+            margin-top: 5vh;
+            text-align: center;            
+        }
+        .intro-text h1{
+            font-size: 30px;
+        }
+        .intro-text p{
+            font-size: 18px;
+        }
+        .cta{
+            padding: 10px 0px 0px 0px;
+        }
+        .laptop-select{
+            bottom: 5%;
+            right: 50%;
+            width: 50%;
+            transform: translate(50%, 5%);
+        }
+        .cover img{
+            height: 80%;
+        }
+        .small-circle, .medium-circle, .big-circle{
+            opacity: 0.2;
+        }
+    }
+
+    @media screen and (max-width: 360px){
+
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.svg" alt="logo" />
+            <h4 class="logo">Developer</h4>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="#">Portfolio</a></li>
+                <li><a class="nav-link" href="#">Blog</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <!--
+            <img src="img/cart.svg" alt="cart" />
+            -->
+            <img src="img/logo.svg" alt="cart" />
+        </div>
+    </header>
+
+    <!--
+    <hr color="gray" size=1 width="90%">
+    -->
+    
+    <main>
+        <hr color="gray" size=1 width="90%">
+        <section class="presentation">
+            <div class="introduction">
+                <div class="intro-text">
+                    <h1>Services</h1>
+                </div>
+                <div class="cta">                    
+                    <div class="intro-text">
+                        <h2>Animations</h2>
+                    </div>
+                    <button class="cta-select">Movies</button>
+                    <button class="cta-select">Publicity</button>
+                    <button class="cta-select">Web</button>
+                    <button class="cta-select">Games</button>
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>APPS</h2>
+                    </div>
+                    <button class="cta-add">Natives</button>
+                    <button class="cta-add">Web Apps</button>
+                    <button class="cta-add">Hybrid</button>
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>eBooks</h2>
+                    </div>
+                    <button class="cta-select">EPUB</button>
+                    <button class="cta-select">MOBI</button>
+                    <button class="cta-select">AZW</button>
+                    <button class="cta-select">PDF</button>
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>eLearning</h2>
+                    </div>
+                    <button class="cta-add">Courses</button>
+                    <button class="cta-add">Companies</button>
+                    <button class="cta-add">Governments</button>
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>Games</h2>
+                    </div>                    
+                    <button class="cta-select">Console</button>
+                    <button class="cta-select">Mobiles</button>
+                    <button class="cta-select">Web</button>
+                    <button class="cta-select">Simulations</button>
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>Multimedia</h2>
+                    </div>
+                    <button class="cta-add">Audios</button>
+                    <button class="cta-add">Banners</button>
+                    <button class="cta-add">Images</button>
+                    <button class="cta-add">Musics</button>                   
+                    <button class="cta-add">Presentations</button>
+                    <button class="cta-add">Text Materials</button>
+                    <button class="cta-add">Videos</button>
+                    
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>Projects</h2>
+                    </div>
+                    <button class="cta-select">Companies</button>
+                    <button class="cta-select">Personals</button>
+                    <button class="cta-select">Socials</button>
+                    <button class="cta-select">Privates</button>
+                    <button class="cta-select">Publics</button>
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>Sites</h2>
+                    </div>
+                    <button class="cta-add">Frontend</button>
+                    <button class="cta-add">Backend</button>
+                    <button class="cta-add">Data Bases</button>
+                    <button class="cta-add">CMSS</button>
+                    <br><br><br>
+                    <div class="intro-text">
+                        <h2>Systems</h2>
+                    </div>
+                    <button class="cta-select">Customiseds</button>
+                    <button class="cta-select">ERP</button>
+                    <button class="cta-select">CRM</button>
+                    <button class="cta-select">BI</button>
+                    <button class="cta-select">Call Center</button>
+                    <button class="cta-select">SGA</button>
+                    <button class="cta-select">TPV</button>
+                    <br><br><br>
+
+
+                    <!--
+                    <br><br><br><br><br><br>
+                    <button class="cta-add">APPS</button>
+                    <button class="cta-select">eBooks</button>
+                    <button class="cta-add">eLearning</button>
+                    <button class="cta-select">Games</button>
+                    <button class="cta-add">Multimedia</button>
+                    <button class="cta-select">Projects</button>
+                    <button class="cta-add">Sites</button>
+                    <button class="cta-select">Systems</button>
+                    -->
+                </div>
+            </div>
+        </section>
+    <!--
+        <img class="big-circle" src="./img/big-eclipse.svg" alt=""/>
+        <img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
+        <img class="small-circle" src="./img/small-eclipse.svg" alt=""/>
+    -->
+    </main>
+
+</body>
+</html>
